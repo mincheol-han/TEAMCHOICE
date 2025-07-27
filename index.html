@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교대항 토너먼트 대진표 추첨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>학교대항 토너먼트 대진표 추첨</h1>
+            <p class="subtitle">공정하고 효율적인 대진표 생성 프로그램</p>
+        </header>
+
+        <main>
+            <section class="school-management">
+                <h2>참가 학교 관리</h2>
+                <div class="input-section">
+                    <input type="text" id="schoolNameInput" placeholder="학교명을 입력하세요" maxlength="50">
+                    <button id="addSchoolBtn" class="btn btn-primary">학교 추가</button>
+                </div>
+                <div class="school-count">
+                    <p>현재 참가 학교: <span id="schoolCount">0</span>개</p>
+                    <p class="info-text">토너먼트 구성을 위해 2, 4, 8, 16개 등의 학교가 권장됩니다.</p>
+                </div>
+                <div class="school-list-container">
+                    <h3>참가 학교 목록</h3>
+                    <ul id="schoolList" class="school-list"></ul>
+                </div>
+            </section>
+
+            <section class="tournament-controls">
+                <h2>대진표 생성</h2>
+                <div class="control-buttons">
+                    <button id="generateBracketBtn" class="btn btn-success" disabled>
+                        대진표 생성
+                    </button>
+                    <button id="clearBracketBtn" class="btn btn-secondary" disabled>
+                        대진표 초기화
+                    </button>
+                </div>
+            </section>
+
+            <section class="tournament-bracket" id="tournamentBracket">
+                <h2>토너먼트 대진표</h2>
+                <div id="bracketContainer" class="bracket-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 학교대항 토너먼트 대진표 추첨 프로그램</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
